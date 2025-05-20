@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.25,
+  "group": "cebbite",
+  "ingredient": {
+    "item": "eldritch_arcanum:deepslate_cebbite_ore"
+  },
+  "result": {
+    "count": 1,
+    "id": "eldritch_arcanum:cebbite_ingot"
+  }
+}

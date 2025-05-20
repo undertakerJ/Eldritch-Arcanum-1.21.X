@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 0.25,
+  "group": "cebbite",
+  "ingredient": {
+    "item": "eldritch_arcanum:cebbite_ore"
+  },
+  "result": {
+    "count": 1,
+    "id": "eldritch_arcanum:cebbite_ingot"
+  }
+}

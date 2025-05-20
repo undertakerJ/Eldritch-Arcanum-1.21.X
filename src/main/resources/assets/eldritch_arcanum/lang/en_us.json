@@ -1,0 +1,11 @@
+{
+  "itemGroup.eldritch_arcanum.items": "Eldritch Arcanum Items",
+  "itemGroup.eldritch_arcanum.blocks": "Eldritch Arcanum Blocks",
+
+  "block.eldritch_arcanum.cebbite_ore": "Cebbite Ore",
+  "block.eldritch_arcanum.sculk_cebbite_ore": "Sculk Cebbite Ore",
+  "block.eldritch_arcanum.deepslate_cebbite_ore": "Deepslate Cebbite Ore",
+
+  "item.eldritch_arcanum.raw_cebbite_ore": "Raw Cebbite Ore",
+  "item.eldritch_arcanum.cebbite_ingot": "Cebbite Ingot"
+}
