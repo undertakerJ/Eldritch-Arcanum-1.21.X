@@ -1,3 +1,12 @@
-// 1.21.1	2025-05-20T23:50:44.3969276	Tags for minecraft:block mod id eldritch_arcanum
-74b6c14d8791bee205c8d32053b4afd792bd5653 data/minecraft/tags/block/mineable/pickaxe.json
-74b6c14d8791bee205c8d32053b4afd792bd5653 data/minecraft/tags/block/needs_diamond_tool.json
+// 1.21.1	2025-05-22T18:28:31.4331508	Tags for minecraft:block mod id eldritch_arcanum
+2c7000b5fbd7223fff3d70ee20eb165162fd9163 data/eldritch_arcanum/tags/block/incorrect_for_cebbite_tool.json
+5f26c68d2b55b817676cff90720768ce49ada194 data/eldritch_arcanum/tags/block/needs_cebbite_tool.json
+8b25b48841f87e867223f2bd7a7922bd5ee77b9a data/minecraft/tags/block/incorrect_for_diamond_tool.json
+8b25b48841f87e867223f2bd7a7922bd5ee77b9a data/minecraft/tags/block/incorrect_for_gold_tool.json
+8b25b48841f87e867223f2bd7a7922bd5ee77b9a data/minecraft/tags/block/incorrect_for_iron_tool.json
+8b25b48841f87e867223f2bd7a7922bd5ee77b9a data/minecraft/tags/block/incorrect_for_netherite_tool.json
+8b25b48841f87e867223f2bd7a7922bd5ee77b9a data/minecraft/tags/block/incorrect_for_stone_tool.json
+8b25b48841f87e867223f2bd7a7922bd5ee77b9a data/minecraft/tags/block/incorrect_for_wooden_tool.json
+b0ef039e3ac7b76b43cd23686186f02a9e4001db data/minecraft/tags/block/logs_that_burn.json
+9b28be610b69aed61fa6fcf220e19517a76d51eb data/minecraft/tags/block/mineable/pickaxe.json
+eccad44b440c1d581ff4c74682284c3f8355ac5f data/minecraft/tags/block/needs_diamond_tool.json

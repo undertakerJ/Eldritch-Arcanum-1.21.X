@@ -1,4 +1,12 @@
-// 1.21.1	2025-05-20T23:41:53.9357202	Loot Tables
+// 1.21.1	2025-05-22T18:28:31.4371491	Loot Tables
+5af85461b496e3734040b22cf0712c84e4425867 data/eldritch_arcanum/loot_table/blocks/adamantite_block.json
+5dec4307a89eb18b1699da170f57e9c9ed622ea5 data/eldritch_arcanum/loot_table/blocks/adamantite_ore.json
+e9d7d850c7e11c3ce4d9b4382dac4a65ce4f1f21 data/eldritch_arcanum/loot_table/blocks/cebbite_block.json
 292aabccd4c2f48af20e71a1f99c9dd09616c205 data/eldritch_arcanum/loot_table/blocks/cebbite_ore.json
 fc18c3dfbad8111d48ca88431966fab35cb8eb00 data/eldritch_arcanum/loot_table/blocks/deepslate_cebbite_ore.json
 ad42af821e73b9343ba567d5a25a1868bc6eef05 data/eldritch_arcanum/loot_table/blocks/sculk_cebbite_ore.json
+d47ec6937740e97cca355e817d430074266e8140 data/eldritch_arcanum/loot_table/blocks/stripped_velescil_log.json
+169eff079ab6681794fc5d22ad03763964f99e06 data/eldritch_arcanum/loot_table/blocks/stripped_velescil_wood.json
+fe19cc494c58a2d4419d99d485faf6ffa98483c3 data/eldritch_arcanum/loot_table/blocks/velescil_log.json
+be7978df62f5d7df37faadf94ce890548003a3bb data/eldritch_arcanum/loot_table/blocks/velescil_planks.json
+f330937462449a8c79c979996f75cdb7d07c2ba5 data/eldritch_arcanum/loot_table/blocks/velescil_wood.json

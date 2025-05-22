@@ -5,7 +5,32 @@
   "block.eldritch_arcanum.cebbite_ore": "Cebbite Ore",
   "block.eldritch_arcanum.sculk_cebbite_ore": "Sculk Cebbite Ore",
   "block.eldritch_arcanum.deepslate_cebbite_ore": "Deepslate Cebbite Ore",
+  "block.eldritch_arcanum.cebbite_block": "Cebbite Block",
+  "block.eldritch_arcanum.adamantite_ore": "Adamantite Ore",
+  "block.eldritch_arcanum.adamantite_block": "Adamantite Block",
+  "block.eldritch_arcanum.velescil_log": "Velescil Log",
+  "block.eldritch_arcanum.velescil_wood": "Velescil Wood",
+  "block.eldritch_arcanum.stripped_velescil_log": "Stripped Velescil Log",
+  "block.eldritch_arcanum.stripped_velescil_wood": "Stripped Velescil Wood",
+  "block.eldritch_arcanum.velescil_planks": "Velescil Planks",
 
   "item.eldritch_arcanum.raw_cebbite_ore": "Raw Cebbite Ore",
-  "item.eldritch_arcanum.cebbite_ingot": "Cebbite Ingot"
+  "item.eldritch_arcanum.cebbite_ingot": "Cebbite Ingot",
+  "item.eldritch_arcanum.raw_adamantite": "Raw Adamantite",
+  "item.eldritch_arcanum.adamantite_ingot": "Adamantite Ingot",
+  "item.eldritch_arcanum.velescil_wood_handle": "Velescil Handle",
+
+  "item.eldritch_arcanum.cebbite_sword": "Cebbite Sword",
+  "item.eldritch_arcanum.cebbite_axe": "Cebbite Axe",
+  "item.eldritch_arcanum.cebbite_pickaxe": "Cebbite Pickaxe",
+  "item.eldritch_arcanum.cebbite_shovel": "Cebbite Shovel",
+  "item.eldritch_arcanum.cebbite_hoe": "Cebbite Hoe",
+
+  "item.eldritch_arcanum.adamantite_sword": "Adamantite Sword",
+  "item.eldritch_arcanum.adamantite_axe": "Adamantite Axe",
+  "item.eldritch_arcanum.adamantite_pickaxe": "Adamantite Pickaxe",
+  "item.eldritch_arcanum.adamantite_shovel": "Adamantite Shovel",
+  "item.eldritch_arcanum.adamantite_hoe": "Adamantite Hoe"
+
+
 }
