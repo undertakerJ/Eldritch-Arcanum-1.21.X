@@ -197,6 +197,59 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         .define('S', ModItems.VELESCIL_WOOD_HANDLE.get())
         .unlockedBy("has_adamantite", has(ModItems.ADAMANTITE_INGOT.get()))
         .save(recipeOutput);
+    ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.ADAMANTITE_HELMET)
+            .pattern("###")
+            .pattern("# #")
+            .define('#', ModItems.ADAMANTITE_INGOT.get())
+            .unlockedBy("has_adamantite", has(ModItems.ADAMANTITE_INGOT.get()))
+            .save(recipeOutput);
+    ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.ADAMANTITE_CHESTPLATE)
+            .pattern("# #")
+            .pattern("###")
+            .pattern("###")
+            .define('#', ModItems.ADAMANTITE_INGOT.get())
+            .unlockedBy("has_adamantite", has(ModItems.ADAMANTITE_INGOT.get()))
+            .save(recipeOutput);
+    ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.ADAMANTITE_LEGGINGS)
+            .pattern("###")
+            .pattern("# #")
+            .pattern("# #")
+            .define('#', ModItems.ADAMANTITE_INGOT.get())
+            .unlockedBy("has_adamantite", has(ModItems.ADAMANTITE_INGOT.get()))
+            .save(recipeOutput);
+    ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.ADAMANTITE_BOOTS)
+            .pattern("# #")
+            .pattern("# #")
+            .define('#', ModItems.ADAMANTITE_INGOT.get())
+            .unlockedBy("has_adamantite", has(ModItems.ADAMANTITE_INGOT.get()))
+            .save(recipeOutput);
+
+    ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.CEBBITE_HELMET)
+            .pattern("###")
+            .pattern("# #")
+            .define('#', ModItems.CEBBITE_INGOT.get())
+            .unlockedBy("has_cebbite", has(ModItems.CEBBITE_INGOT.get()))
+            .save(recipeOutput);
+    ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.CEBBITE_CHESTPLATE)
+            .pattern("# #")
+            .pattern("###")
+            .pattern("###")
+            .define('#', ModItems.CEBBITE_INGOT.get())
+            .unlockedBy("has_cebbite", has(ModItems.CEBBITE_INGOT.get()))
+            .save(recipeOutput);
+    ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.CEBBITE_LEGGINGS)
+            .pattern("###")
+            .pattern("# #")
+            .pattern("# #")
+            .define('#', ModItems.CEBBITE_INGOT.get())
+            .unlockedBy("has_cebbite", has(ModItems.CEBBITE_INGOT.get()))
+            .save(recipeOutput);
+    ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.CEBBITE_BOOTS)
+            .pattern("# #")
+            .pattern("# #")
+            .define('#', ModItems.CEBBITE_INGOT.get())
+            .unlockedBy("has_cebbite", has(ModItems.CEBBITE_INGOT.get()))
+            .save(recipeOutput);
   }
 
   protected static void oreSmelting(
