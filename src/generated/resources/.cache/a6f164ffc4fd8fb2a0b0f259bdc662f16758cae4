@@ -1,4 +1,4 @@
-// 1.21.1	2025-05-22T18:28:31.4451465	Tags for minecraft:item mod id eldritch_arcanum
+// 1.21.1	2025-05-23T16:51:43.0443801	Tags for minecraft:item mod id eldritch_arcanum
 b664df0b38c6372efac51331cb81834e1e4fb879 data/minecraft/tags/item/axes.json
 77d7d9d88400dcfbccefee43f12ece5c4bf94aef data/minecraft/tags/item/hoes.json
 b0ef039e3ac7b76b43cd23686186f02a9e4001db data/minecraft/tags/item/logs_that_burn.json
@@ -6,3 +6,4 @@ b1a01ef76b2330cb473b194bd10810be8762fb49 data/minecraft/tags/item/pickaxes.json
 42ec131fde66880182837e4acfbfae60c1c9c3d9 data/minecraft/tags/item/planks.json
 9fbe1e12d59685ba796d9a02163efd4e2a51a0c6 data/minecraft/tags/item/shovels.json
 c40e07a958afc63278ea85ec8eb7a1765904710e data/minecraft/tags/item/swords.json
+bfab8da0c1cb51000c8d07b3b380a29f22254fa2 data/minecraft/tags/item/trimmable_armor.json

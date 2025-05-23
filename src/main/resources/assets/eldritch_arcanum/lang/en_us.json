@@ -26,12 +26,21 @@
   "item.eldritch_arcanum.cebbite_pickaxe": "Cebbite Pickaxe",
   "item.eldritch_arcanum.cebbite_shovel": "Cebbite Shovel",
   "item.eldritch_arcanum.cebbite_hoe": "Cebbite Hoe",
+  "item.eldritch_arcanum.cebbite_helmet": "Cebbite Helmet",
+  "item.eldritch_arcanum.cebbite_chestplate": "Cebbite Chestplate",
+  "item.eldritch_arcanum.cebbite_leggings": "Cebbite Leggings",
+  "item.eldritch_arcanum.cebbite_boots": "Cebbite Boots",
+
 
   "item.eldritch_arcanum.adamantite_sword": "Adamantite Sword",
   "item.eldritch_arcanum.adamantite_axe": "Adamantite Axe",
   "item.eldritch_arcanum.adamantite_pickaxe": "Adamantite Pickaxe",
   "item.eldritch_arcanum.adamantite_shovel": "Adamantite Shovel",
-  "item.eldritch_arcanum.adamantite_hoe": "Adamantite Hoe"
+  "item.eldritch_arcanum.adamantite_hoe": "Adamantite Hoe",
+  "item.eldritch_arcanum.adamantite_helmet": "Adamantite Helmet",
+  "item.eldritch_arcanum.adamantite_chestplate": "Adamantite Chestplate",
+  "item.eldritch_arcanum.adamantite_leggings": "Adamantite Leggings",
+  "item.eldritch_arcanum.adamantite_boots": "Adamantite Boots"
 
 
 }
