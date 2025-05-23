@@ -41,6 +41,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
     blockItem(ModBlocks.STRIPPED_VELESCIL_LOG);
     blockItem(ModBlocks.VELESCIL_WOOD);
     blockItem(ModBlocks.STRIPPED_VELESCIL_WOOD);
+    simpleBlockWithItem(ModBlocks.PEDESTAL.get(), new ModelFile.UncheckedModelFile(modLoc("block/pedestal_block")));
   }
 
   private void blockWithItem(DeferredBlock<?> deferredBlock) {

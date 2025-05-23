@@ -1,0 +1,8 @@
+{
+  "remove": [
+    "#eldritch_arcanum:needs_cebbite_tool"
+  ],
+  "values": [
+    "#minecraft:incorrect_for_diamond_tool"
+  ]
+}

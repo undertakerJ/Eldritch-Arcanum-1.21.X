@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_cebbite_block": {
+      "conditions": {
+        "items": [
+          {
+            "items": "eldritch_arcanum:cebbite_block"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "eldritch_arcanum:cebbite_ingot"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_cebbite_block"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "eldritch_arcanum:cebbite_ingot"
+    ]
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "eldritch_arcanum:adamantite_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "eldritch_arcanum:adamantite_ingot"
+  }
+}

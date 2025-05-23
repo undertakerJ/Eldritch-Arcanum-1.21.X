@@ -31,6 +31,7 @@ import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.undertaker.eldritch_arcanum.blocks.ModBlocks;
+import net.undertaker.eldritch_arcanum.blocks.entity.ModBlockEntities;
 import net.undertaker.eldritch_arcanum.items.ModCreativeTabs;
 import net.undertaker.eldritch_arcanum.items.ModItems;
 import org.slf4j.Logger;
@@ -47,6 +48,7 @@ public class EldritchArcanum {
     ModItems.register(modEventBus);
     ModBlocks.register(modEventBus);
     ModCreativeTabs.register(modEventBus);
+    ModBlockEntities.register(modEventBus);
 
     modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
   }

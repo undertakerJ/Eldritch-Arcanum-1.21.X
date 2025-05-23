@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "eldritch_arcanum:block/stripped_velescil_log_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "eldritch_arcanum:block/stripped_velescil_log"
+    },
+    "axis=z": {
+      "model": "eldritch_arcanum:block/stripped_velescil_log_horizontal",
+      "x": 90
+    }
+  }
+}

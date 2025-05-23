@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.25,
+  "group": "adamantite",
+  "ingredient": {
+    "item": "eldritch_arcanum:raw_adamantite"
+  },
+  "result": {
+    "count": 1,
+    "id": "eldritch_arcanum:adamantite_ingot"
+  }
+}

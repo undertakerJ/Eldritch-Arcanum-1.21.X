@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "eldritch_arcanum:block/stripped_velescil_log_top",
+    "side": "eldritch_arcanum:block/stripped_velescil_log"
+  }
+}

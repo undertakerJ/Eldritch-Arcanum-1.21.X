@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "eldritch_arcanum:adamantite_ingot"
+    },
+    "S": {
+      "item": "eldritch_arcanum:velescil_wood_handle"
+    }
+  },
+  "pattern": [
+    "#",
+    "#",
+    "S"
+  ],
+  "result": {
+    "count": 1,
+    "id": "eldritch_arcanum:adamantite_sword"
+  }
+}

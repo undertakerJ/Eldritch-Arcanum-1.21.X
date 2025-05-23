@@ -14,6 +14,7 @@ import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.undertaker.eldritch_arcanum.EldritchArcanum;
 import net.undertaker.eldritch_arcanum.blocks.custom.ModFlammableRotatedPillarBlock;
+import net.undertaker.eldritch_arcanum.blocks.custom.PedestalBlock;
 import net.undertaker.eldritch_arcanum.items.ModItems;
 
 import java.util.function.Supplier;
@@ -128,6 +129,10 @@ public class ModBlocks {
                   return 5;
               }
           });
+
+    public static final DeferredBlock<Block> PEDESTAL =
+            registerBlock("pedestal_block",
+                    () -> new PedestalBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_BLOCK)));
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block){
         DeferredBlock<T> toReturn = BLOCKS.register(name, block);

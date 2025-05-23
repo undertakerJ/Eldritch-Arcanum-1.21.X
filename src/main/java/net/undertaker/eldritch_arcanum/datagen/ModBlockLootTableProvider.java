@@ -33,6 +33,7 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.STRIPPED_VELESCIL_WOOD.get());
         dropSelf(ModBlocks.STRIPPED_VELESCIL_LOG.get());
         dropSelf(ModBlocks.VELESCIL_PLANKS.get());
+        dropSelf(ModBlocks.PEDESTAL.get());
 
     }
 
