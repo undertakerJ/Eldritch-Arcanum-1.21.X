@@ -2,14 +2,14 @@ package net.undertaker.eldritch_arcanum.items.custom.cebbite;
 
 import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.ShovelItem;
-import net.undertaker.eldritch_arcanum.util.ModTiers;
+import net.undertaker.eldritch_arcanum.items.ModToolTiers;
 
 public class CebbiteShovelItem extends ShovelItem {
   public CebbiteShovelItem() {
     super(
-        ModTiers.CEBBITE,
+        ModToolTiers.CEBBITE,
         new Properties()
             .rarity(Rarity.RARE)
-            .attributes(createAttributes(ModTiers.CEBBITE, 1, -3)));
+            .attributes(createAttributes(ModToolTiers.CEBBITE, 1, -3)));
   }
 }

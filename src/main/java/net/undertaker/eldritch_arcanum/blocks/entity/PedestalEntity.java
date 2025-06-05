@@ -95,4 +95,16 @@ public class PedestalEntity extends BlockEntity {
             level.markAndNotifyBlock(getBlockPos(), level.getChunkAt(getBlockPos()), getBlockState(), getBlockState(), 3,1);
         }
     }
+
+    public void decrementItem(int count) {
+        ItemStack current = getItem();
+        current.shrink(count);
+        if (current.isEmpty()) {
+            clearContents();
+        } else {
+            setItem(current);
+        }
+        setChanged();
+    }
+
 }

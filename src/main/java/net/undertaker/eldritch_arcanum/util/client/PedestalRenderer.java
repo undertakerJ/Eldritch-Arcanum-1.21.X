@@ -33,7 +33,7 @@ public class PedestalRenderer implements BlockEntityRenderer<PedestalEntity> {
         }
 
         matrixStack.pushPose();
-        matrixStack.translate(0.5, 1.0, 0.5);
+        matrixStack.translate(0.5, 1, 0.5);
         matrixStack.scale(1f, 1f, 1f);
 
         long time = System.currentTimeMillis();

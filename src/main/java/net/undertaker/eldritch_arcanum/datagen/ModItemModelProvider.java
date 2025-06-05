@@ -43,6 +43,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.RAW_ADAMANTITE.get());
         basicItem(ModItems.ADAMANTITE_INGOT.get());
         basicItem(ModItems.VELESCIL_WOOD_HANDLE.get());
+        basicItem(ModItems.ESSENCE_CRYSTAL.get());
 
         handheldItem(ModItems.CEBBITE_AXE.get());
         handheldItem(ModItems.CEBBITE_PICKAXE.get());

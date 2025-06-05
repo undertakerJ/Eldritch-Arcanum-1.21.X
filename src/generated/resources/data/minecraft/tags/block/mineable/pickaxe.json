@@ -5,6 +5,8 @@
     "eldritch_arcanum:sculk_cebbite_ore",
     "eldritch_arcanum:cebbite_block",
     "eldritch_arcanum:adamantite_ore",
-    "eldritch_arcanum:adamantite_block"
+    "eldritch_arcanum:adamantite_block",
+    "eldritch_arcanum:copper_altar",
+    "eldritch_arcanum:pedestal_block"
   ]
 }

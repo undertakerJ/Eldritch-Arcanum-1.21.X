@@ -13,6 +13,8 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.undertaker.eldritch_arcanum.EldritchArcanum;
+import net.undertaker.eldritch_arcanum.blocks.custom.CopperAltarBlock;
+import net.undertaker.eldritch_arcanum.blocks.custom.CrystalClusterBlock;
 import net.undertaker.eldritch_arcanum.blocks.custom.ModFlammableRotatedPillarBlock;
 import net.undertaker.eldritch_arcanum.blocks.custom.PedestalBlock;
 import net.undertaker.eldritch_arcanum.items.ModItems;
@@ -133,6 +135,13 @@ public class ModBlocks {
     public static final DeferredBlock<Block> PEDESTAL =
             registerBlock("pedestal_block",
                     () -> new PedestalBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_BLOCK)));
+    public static final DeferredBlock<Block> COPPER_ALTAR =
+            registerBlock("copper_altar",
+                    () -> new CopperAltarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_BLOCK)));
+  public static final DeferredBlock<Block> CRYSTAL_CLUSTER =
+      registerBlock(
+          "crystal_cluster",
+          () -> new CrystalClusterBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_BLOCK)));
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block){
         DeferredBlock<T> toReturn = BLOCKS.register(name, block);

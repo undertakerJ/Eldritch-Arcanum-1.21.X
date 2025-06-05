@@ -2,15 +2,15 @@ package net.undertaker.eldritch_arcanum.items.custom.cebbite;
 
 import net.minecraft.world.item.AxeItem;
 import net.minecraft.world.item.Rarity;
-import net.undertaker.eldritch_arcanum.util.ModTiers;
+import net.undertaker.eldritch_arcanum.items.ModToolTiers;
 
 public class CebbiteAxeItem extends AxeItem {
 
   public CebbiteAxeItem() {
     super(
-        ModTiers.CEBBITE,
+        ModToolTiers.CEBBITE,
         new Properties()
             .rarity(Rarity.RARE)
-            .attributes(createAttributes(ModTiers.CEBBITE, 5, -3.1f)));
+            .attributes(createAttributes(ModToolTiers.CEBBITE, 5, -3.1f)));
   }
 }

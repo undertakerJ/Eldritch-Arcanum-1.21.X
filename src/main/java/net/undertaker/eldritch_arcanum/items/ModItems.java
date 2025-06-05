@@ -6,9 +6,9 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.undertaker.eldritch_arcanum.EldritchArcanum;
+import net.undertaker.eldritch_arcanum.items.custom.EssenceCrystalItem;
 import net.undertaker.eldritch_arcanum.items.custom.adamantite.*;
 import net.undertaker.eldritch_arcanum.items.custom.cebbite.*;
-import net.undertaker.eldritch_arcanum.util.ModArmorMaterials;
 
 public class ModItems {
   public static final DeferredRegister.Items ITEMS =
@@ -70,6 +70,7 @@ public static final DeferredItem<ArmorItem> CEBBITE_BOOTS =
                   ArmorItem.Type.BOOTS,
                   new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(33))));
 
+
   public static final DeferredItem<Item> ADAMANTITE_SWORD =
       ITEMS.register("adamantite_sword", AdamantiteSwordItem::new);
   public static final DeferredItem<Item> ADAMANTITE_AXE =
@@ -113,6 +114,9 @@ public static final DeferredItem<ArmorItem> CEBBITE_BOOTS =
                                   ModArmorMaterials.ADAMANTITE_ARMOR_MATERIAL,
                                   ArmorItem.Type.BOOTS,
                                   new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(29))));
+
+  public static final DeferredItem<Item> ESSENCE_CRYSTAL =
+          ITEMS.register("essence_crystal", EssenceCrystalItem::new);
 
   public static void register(IEventBus eventBus) {
     ITEMS.register(eventBus);

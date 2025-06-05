@@ -1,6 +1,7 @@
 {
   "itemGroup.eldritch_arcanum.items": "Eldritch Arcanum Items",
   "itemGroup.eldritch_arcanum.blocks": "Eldritch Arcanum Blocks",
+  "itemGroup.eldritch_arcanum.crystals": "Eldritch Arcanum Crystals",
 
   "block.eldritch_arcanum.cebbite_ore": "Cebbite Ore",
   "block.eldritch_arcanum.sculk_cebbite_ore": "Sculk Cebbite Ore",
@@ -14,12 +15,14 @@
   "block.eldritch_arcanum.stripped_velescil_wood": "Stripped Velescil Wood",
   "block.eldritch_arcanum.velescil_planks": "Velescil Planks",
   "block.eldritch_arcanum.pedestal_block": "Pedestal",
+  "block.eldritch_arcanum.copper_altar": "Copper Altar",
 
   "item.eldritch_arcanum.raw_cebbite_ore": "Raw Cebbite Ore",
   "item.eldritch_arcanum.cebbite_ingot": "Cebbite Ingot",
   "item.eldritch_arcanum.raw_adamantite": "Raw Adamantite",
   "item.eldritch_arcanum.adamantite_ingot": "Adamantite Ingot",
   "item.eldritch_arcanum.velescil_wood_handle": "Velescil Handle",
+  "item.eldritch_arcanum.essence_crystal": "Essence Crystal",
 
   "item.eldritch_arcanum.cebbite_sword": "Cebbite Sword",
   "item.eldritch_arcanum.cebbite_axe": "Cebbite Axe",
@@ -31,7 +34,6 @@
   "item.eldritch_arcanum.cebbite_leggings": "Cebbite Leggings",
   "item.eldritch_arcanum.cebbite_boots": "Cebbite Boots",
 
-
   "item.eldritch_arcanum.adamantite_sword": "Adamantite Sword",
   "item.eldritch_arcanum.adamantite_axe": "Adamantite Axe",
   "item.eldritch_arcanum.adamantite_pickaxe": "Adamantite Pickaxe",
@@ -40,7 +42,10 @@
   "item.eldritch_arcanum.adamantite_helmet": "Adamantite Helmet",
   "item.eldritch_arcanum.adamantite_chestplate": "Adamantite Chestplate",
   "item.eldritch_arcanum.adamantite_leggings": "Adamantite Leggings",
-  "item.eldritch_arcanum.adamantite_boots": "Adamantite Boots"
+  "item.eldritch_arcanum.adamantite_boots": "Adamantite Boots",
 
+  "essence.eldritch_arcanum.lunar_essence": "Lunar Essence",
+  "essence.eldritch_arcanum.void_essence": "Void Essence",
 
+  "curios.identifier.head_slot": "цкдпоущцр"
 }

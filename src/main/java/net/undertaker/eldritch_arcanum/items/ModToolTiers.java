@@ -1,14 +1,13 @@
-package net.undertaker.eldritch_arcanum.util;
+package net.undertaker.eldritch_arcanum.items;
 
 
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.neoforged.neoforge.common.SimpleTier;
-import net.undertaker.eldritch_arcanum.items.ModItems;
+import net.undertaker.eldritch_arcanum.util.ModTags;
 
 
-
-public class ModTiers {
+public class ModToolTiers {
   public static final Tier CEBBITE =
       new SimpleTier(
           ModTags.Blocks.INCORRECT_FOR_CEBBITE_TOOL,

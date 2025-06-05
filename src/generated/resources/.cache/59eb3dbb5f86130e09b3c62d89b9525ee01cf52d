@@ -1,8 +1,9 @@
-// 1.21.1	2025-05-23T12:52:35.7598347	Loot Tables
+// 1.21.1	2025-05-23T19:28:07.2062681	Loot Tables
 5af85461b496e3734040b22cf0712c84e4425867 data/eldritch_arcanum/loot_table/blocks/adamantite_block.json
 5dec4307a89eb18b1699da170f57e9c9ed622ea5 data/eldritch_arcanum/loot_table/blocks/adamantite_ore.json
 e9d7d850c7e11c3ce4d9b4382dac4a65ce4f1f21 data/eldritch_arcanum/loot_table/blocks/cebbite_block.json
 292aabccd4c2f48af20e71a1f99c9dd09616c205 data/eldritch_arcanum/loot_table/blocks/cebbite_ore.json
+c1d6e22cd1dd9639420f7ce1b8e8b08624dcfa94 data/eldritch_arcanum/loot_table/blocks/copper_altar.json
 fc18c3dfbad8111d48ca88431966fab35cb8eb00 data/eldritch_arcanum/loot_table/blocks/deepslate_cebbite_ore.json
 f9e6dc560ee5981decad9764696f4b2296e8afa6 data/eldritch_arcanum/loot_table/blocks/pedestal_block.json
 ad42af821e73b9343ba567d5a25a1868bc6eef05 data/eldritch_arcanum/loot_table/blocks/sculk_cebbite_ore.json

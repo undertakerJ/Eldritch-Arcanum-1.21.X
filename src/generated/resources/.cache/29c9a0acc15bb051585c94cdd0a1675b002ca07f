@@ -1,4 +1,4 @@
-// 1.21.1	2025-05-23T16:51:43.0463799	Item Models: eldritch_arcanum
+// 1.21.1	2025-05-24T19:32:40.8146242	Item Models: eldritch_arcanum
 d3532a4883cee6c81eabe236dd37a2eb45bfa00c assets/eldritch_arcanum/models/item/adamantite_axe.json
 f6786d8dc3e513b727f28418478ac24f56c99378 assets/eldritch_arcanum/models/item/adamantite_boots.json
 d9618ea3b85395b78e456f5374727d42319a4920 assets/eldritch_arcanum/models/item/adamantite_boots_amethyst_trim.json
@@ -99,6 +99,7 @@ dd36030982a71df69d3bf3781aad8420664fccdc assets/eldritch_arcanum/models/item/ceb
 16384d2b819392f2e8c00dd997892976c41c4975 assets/eldritch_arcanum/models/item/cebbite_pickaxe.json
 14b50e53104ec699cedf7377fcc898bd0d30f2c4 assets/eldritch_arcanum/models/item/cebbite_shovel.json
 87cc3a3dc99d55c37374943abff5d47b1cfdb379 assets/eldritch_arcanum/models/item/cebbite_sword.json
+d7b489672d9daf7ac98b0c897fa75f8078a8e1f9 assets/eldritch_arcanum/models/item/essence_crystal.json
 2b1acd4ab6d5efb4f4f70b3efc843be6c35d5559 assets/eldritch_arcanum/models/item/raw_adamantite.json
 c0b9663416062f92ce7bd0bde22ee7433741f441 assets/eldritch_arcanum/models/item/raw_cebbite_ore.json
 b03e35c723a3f38101d682c387ac731ae15bee53 assets/eldritch_arcanum/models/item/velescil_wood_handle.json

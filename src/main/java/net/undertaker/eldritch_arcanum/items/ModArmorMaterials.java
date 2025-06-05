@@ -1,4 +1,4 @@
-package net.undertaker.eldritch_arcanum.util;
+package net.undertaker.eldritch_arcanum.items;
 
 
 import net.minecraft.Util;
@@ -13,7 +13,6 @@ import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.undertaker.eldritch_arcanum.EldritchArcanum;
-import net.undertaker.eldritch_arcanum.items.ModItems;
 
 import java.util.EnumMap;
 import java.util.List;

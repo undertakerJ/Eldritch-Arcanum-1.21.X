@@ -12,6 +12,9 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.undertaker.eldritch_arcanum.EldritchArcanum;
 import net.undertaker.eldritch_arcanum.blocks.ModBlocks;
+import net.undertaker.eldritch_arcanum.essence.Essence;
+import net.undertaker.eldritch_arcanum.items.custom.EssenceCrystalItem;
+import net.undertaker.eldritch_arcanum.util.ModRegistries;
 
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
@@ -32,6 +35,7 @@ public class ModCreativeTabs {
                         ModItems.ITEMS.getEntries().stream()
                             .map(Holder::value)
                                 .filter(item -> !(item instanceof BlockItem))
+                                .filter(item -> !(item instanceof EssenceCrystalItem))
                             .forEach(output::accept);
                       })
                   .build());
@@ -51,7 +55,25 @@ public class ModCreativeTabs {
                                                         .forEach(output::accept);
                                             })
                                     .build());
+    public static final Supplier<CreativeModeTab> CRYSTALS_TAB =
+            CREATIVE_MODE_TABS.register(
+                    "crystals_tab",
+                    () ->
+                            CreativeModeTab.builder()
+                                    .icon(() -> new ItemStack(ModItems.ESSENCE_CRYSTAL.get()))
+                                    .withTabsBefore(ResourceLocation.fromNamespaceAndPath(EldritchArcanum.MOD_ID, "blocks_tab"))
+                                    .title(Component.translatable("itemGroup.eldritch_arcanum.crystals"))
+                                    .displayItems((params, output) -> {
+                                            Registry<Essence> reg = ModRegistries.ESSENCE_REGISTRY;
 
+                                            for(Essence essence : reg.stream().toList()){
+                                                ItemStack stack = new ItemStack(ModItems.ESSENCE_CRYSTAL.get());
+                                                ((EssenceCrystalItem)stack.getItem()).bindToEssence(stack, essence);
+                                                output.accept(stack);
+                                            }
+                                    }
+
+                                    ).build());
     public static void register(IEventBus eventBus) {
         CREATIVE_MODE_TABS.register(eventBus);
     }

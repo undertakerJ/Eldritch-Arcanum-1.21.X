@@ -1,8 +1,9 @@
-// 1.21.1	2025-05-23T12:52:35.7618339	Block States: eldritch_arcanum
+// 1.21.1	2025-05-23T19:28:07.2082357	Block States: eldritch_arcanum
 37d82be980accca4de76c4b3c7cc00322f4d3fd0 assets/eldritch_arcanum/blockstates/adamantite_block.json
 7d28d5f980978726c4f0d85e5a22fb9fd8a582ad assets/eldritch_arcanum/blockstates/adamantite_ore.json
 2b43525a8360cdf75ecb49de1e06edc564c16719 assets/eldritch_arcanum/blockstates/cebbite_block.json
 8a43ae7a0391a5c9d214af2bf55d321063055d99 assets/eldritch_arcanum/blockstates/cebbite_ore.json
+66d2e1ccf135ae53d2a9af655a01a952ae7b46d0 assets/eldritch_arcanum/blockstates/copper_altar.json
 97fac8851da2798e91bd75d55ece0e85c49e512b assets/eldritch_arcanum/blockstates/deepslate_cebbite_ore.json
 8fecb3f3c227e9805983993b9ba18de79d01d219 assets/eldritch_arcanum/blockstates/pedestal_block.json
 7448943ad4f1e743d2dbe4fef651e224b90e0e62 assets/eldritch_arcanum/blockstates/sculk_cebbite_ore.json
@@ -30,6 +31,7 @@ c90f5a9cccb60ba6d5f79003c00eefddba702d9c assets/eldritch_arcanum/models/block/ve
 7c52496af91e31527eb8f8c62822d2dbb2b544af assets/eldritch_arcanum/models/item/adamantite_ore.json
 f9b40139ed11521297712823772af09d52d9aa00 assets/eldritch_arcanum/models/item/cebbite_block.json
 fe9caa4c9ec5fdbe463b477633429f8f1f9cbe5a assets/eldritch_arcanum/models/item/cebbite_ore.json
+a519208e8194edcb0da59b5d451dc2a771a43382 assets/eldritch_arcanum/models/item/copper_altar.json
 e21bf742ad05f243e168ca852bf96f0e0f7e2cdc assets/eldritch_arcanum/models/item/deepslate_cebbite_ore.json
 138432d4bd9fa78a12361c5f1e3d9d713a897ee4 assets/eldritch_arcanum/models/item/pedestal_block.json
 342963b1df04a8b2f1ed9606f53a5b54839ae5a8 assets/eldritch_arcanum/models/item/sculk_cebbite_ore.json

@@ -27,7 +27,9 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         .add(ModBlocks.SCULK_CEBBITE_ORE.get())
         .add(ModBlocks.CEBBITE_BLOCK.get())
         .add(ModBlocks.ADAMANTITE_ORE.get())
-        .add(ModBlocks.ADAMANTITE_BLOCK.get());
+        .add(ModBlocks.ADAMANTITE_BLOCK.get())
+            .add(ModBlocks.COPPER_ALTAR.get())
+            .add(ModBlocks.PEDESTAL.get());
 
     tag(BlockTags.NEEDS_DIAMOND_TOOL)
         .add(ModBlocks.CEBBITE_ORE.get())
