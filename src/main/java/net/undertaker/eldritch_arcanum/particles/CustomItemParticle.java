@@ -33,15 +33,9 @@ public class CustomItemParticle extends TextureSheetParticle {
 
     this.target = new Vec3(targetX, targetY, targetZ);
     this.angle = Math.random() * Math.PI * 2;
-    this.radius = Math.sqrt(1.5);
+    this.radius = Math.sqrt(1.25);
 
     this.rotationSpeed = 0.1 + (Math.random() * 0.05);
-    this.sprite =
-        Minecraft.getInstance()
-            .getItemRenderer()
-            .getItemModelShaper()
-            .getItemModel(itemStack)
-            .getParticleIcon();
 
     this.lifetime = 40 + this.random.nextInt(20);
 
@@ -106,7 +100,8 @@ public class CustomItemParticle extends TextureSheetParticle {
   }
 
   public static class Provider implements ParticleProvider<ItemParticleOption> {
-    public Provider(SpriteSet spriteSet) {}
+    public Provider(SpriteSet spriteSet) {
+    }
 
     @Override
     public @Nullable Particle createParticle(
