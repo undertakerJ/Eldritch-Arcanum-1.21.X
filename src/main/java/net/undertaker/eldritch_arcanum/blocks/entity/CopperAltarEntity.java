@@ -3,6 +3,7 @@ package net.undertaker.eldritch_arcanum.blocks.entity;
 import net.minecraft.client.Minecraft;
 import net.minecraft.nbt.Tag;
 import net.neoforged.neoforge.network.PacketDistributor;
+import net.undertaker.eldritch_arcanum.networking.ModNetworking;
 import net.undertaker.eldritch_arcanum.networking.packets.ParticlePacket;
 import net.undertaker.eldritch_arcanum.particles.CustomItemParticle;
 import net.undertaker.eldritch_arcanum.particles.ModParticles;
@@ -62,13 +63,14 @@ public class CopperAltarEntity extends BlockEntity {
     };
 
     private static final Logger log = LoggerFactory.getLogger(CopperAltarEntity.class);
-    private static final int TICKS_PER_STEP = 40;
+    private static final int TICKS_PER_STEP = 50;
 
     private InfusionRecipe currentRecipe;
     private Map<Essence, Integer> remainingEssences;
     private Queue<Pair<ItemStack, BlockPos>> pendingItems;
     private int essenceTickCounter;
     private int itemTickCounter;
+    private int finishTickCounter;
 
     @Override
     protected void loadAdditional(CompoundTag tag, HolderLookup.Provider registries) {
@@ -217,6 +219,7 @@ public class CopperAltarEntity extends BlockEntity {
         });
         essenceTickCounter = 0;
         itemTickCounter = 0;
+        finishTickCounter = 0;
         level.playSound(null, worldPosition, SoundEvents.BELL_BLOCK,
                 SoundSource.BLOCKS, 1f, 1f);
         setChanged();
@@ -238,6 +241,7 @@ public class CopperAltarEntity extends BlockEntity {
         if (absorbEssenceStep()) return;
         itemTickCounter++;
         if (absorbItemStep()) return;
+        finishTickCounter++;
         finishCraft();
     }
 
@@ -267,7 +271,7 @@ public class CopperAltarEntity extends BlockEntity {
     private boolean absorbItemStep() {
         if (pendingItems == null || pendingItems.isEmpty()) return false;
         Pair<ItemStack, BlockPos> pair = pendingItems.peek();
-        if (level instanceof ServerLevel) {
+        if (level instanceof ServerLevel serverLevel) {
             BlockPos pedestalPos = pair.getRight();
             double sx = pedestalPos.getX() + 0.5;
             double sy = pedestalPos.getY() + 0.5;
@@ -278,12 +282,16 @@ public class CopperAltarEntity extends BlockEntity {
             double tx = altarPos.getX() + 0.5;
             double ty = altarPos.getY() + 0.5;
             double tz = altarPos.getZ() + 0.5;
-            ((ServerLevel) level).sendParticles(
+            double deltaX = tx - sx;
+            double deltaY = ty - sy;
+            double deltaZ = tz - sz;
+
+            serverLevel.sendParticles(
                     new ItemParticleOption(ModParticles.ITEM_SWIRL.get(), stack),
-                    sx, sy, sz,   // точка спавна
-                    1,            // count (одноиспользование)
-                    0,0,0, // разброс по XYZ = 0 (мы сами считаем движение)
-                    0.0D          // «скорость» не важна, всё будет рассчитано в CustomItemParticle
+                    sx, sy, sz,
+                    0,
+                    deltaX, deltaY, deltaZ,
+                    1
             );
 
             if (itemTickCounter < TICKS_PER_STEP) return true;
@@ -306,6 +314,7 @@ public class CopperAltarEntity extends BlockEntity {
     }
 
     private void finishCraft() {
+        if (finishTickCounter < TICKS_PER_STEP) return;
         ItemStack result = currentRecipe.getResult().copy();
         inventory.setStackInSlot(0, result);
         currentRecipe.onCraft(level, worldPosition);

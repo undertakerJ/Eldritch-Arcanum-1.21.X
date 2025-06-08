@@ -1,5 +1,6 @@
 package net.undertaker.eldritch_arcanum.networking.packets;
 
+import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ItemParticleOption;
 import net.minecraft.core.particles.ParticleTypes;
@@ -10,6 +11,8 @@ import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.phys.Vec3;
 import net.neoforged.neoforge.network.handling.IPayloadContext;
 import net.undertaker.eldritch_arcanum.blocks.entity.PedestalEntity;
+import net.undertaker.eldritch_arcanum.particles.CustomItemParticle;
+import net.undertaker.eldritch_arcanum.particles.ModParticles;
 
 public class ClientPayloadHandler {
     public static void handleDataOnMain(final ParticlePacket data, final IPayloadContext context) {
@@ -23,21 +26,12 @@ public class ClientPayloadHandler {
                 BlockEntity blockEntity = level.getBlockEntity(pedestalPos);
                 if (!(blockEntity instanceof PedestalEntity pedestal)) return;
                 ItemStack itemStack = pedestal.getItem();
-                  Vec3 start  = Vec3.atCenterOf(pedestalPos);
-                  Vec3 end    = Vec3.atCenterOf(altarPos);
-                  Vec3 raw    = end.subtract(start);
-                  double dist = raw.length();
-                  double travelTicks = 10.0;
-                  double speed = dist / travelTicks;
-                  Vec3 motion = raw.normalize().scale(speed);
-                level.addAlwaysVisibleParticle(
-                    new ItemParticleOption(ParticleTypes.ITEM, itemStack),
-                    start.x,
-                    start.y,
-                    start.z,
-                    motion.x,
-                    motion.y+0.25,
-                    motion.z);
+                  double sx = pedestalPos.getX() + 0.5;
+                  double sy = pedestalPos.getY() + 0.5;
+                  double sz = pedestalPos.getZ() + 0.5;
+                level.addParticle(new ItemParticleOption(ModParticles.ITEM_SWIRL.get(), itemStack),
+                        true, sx, sy, sz,   // точка спавна// count (одноиспользование)
+                        0,0,0); // разброс по XYZ = 0 (мы сами считаем движени);
               })
           .exceptionally(
               throwable -> {

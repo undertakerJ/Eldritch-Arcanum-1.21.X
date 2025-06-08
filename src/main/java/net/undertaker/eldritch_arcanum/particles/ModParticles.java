@@ -17,15 +17,15 @@ public class ModParticles {
     public static final DeferredRegister<ParticleType<?>> PARTICLE_TYPES = DeferredRegister.create(BuiltInRegistries.PARTICLE_TYPE, EldritchArcanum.MOD_ID);
 
     public static final Supplier<ParticleType<ItemParticleOption>> ITEM_SWIRL =
-            PARTICLE_TYPES.register("item_swirl", () -> new ParticleType<ItemParticleOption>(true) {
+            PARTICLE_TYPES.register("item_swirl", () -> new ParticleType<ItemParticleOption>(false) {
                 @Override
                 public MapCodec<ItemParticleOption> codec() {
-                    return ItemParticleOption.codec(this);
+                    return ItemParticleOption.codec(ITEM_SWIRL.get());
                 }
 
                 @Override
                 public StreamCodec<? super RegistryFriendlyByteBuf, ItemParticleOption> streamCodec() {
-                    return ItemParticleOption.streamCodec(this);
+                    return ItemParticleOption.streamCodec(ITEM_SWIRL.get());
                 }
             });
 

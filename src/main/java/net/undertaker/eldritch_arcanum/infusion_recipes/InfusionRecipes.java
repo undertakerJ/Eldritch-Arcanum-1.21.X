@@ -8,7 +8,7 @@ import net.undertaker.eldritch_arcanum.util.ModRegistries;
 
 import java.util.function.Supplier;
 
-public class InfusionRecipes { // Реестр рецептов
+public class InfusionRecipes {
     public static final DeferredRegister<InfusionRecipe> RECIPES =
             DeferredRegister.create(
                     ModRegistries.INFUSION_RECIPE_REGISTRY,

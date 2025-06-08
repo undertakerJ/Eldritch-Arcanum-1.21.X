@@ -37,6 +37,6 @@ public class ModEventBusClientEvents {
     }
     @SubscribeEvent
     public static void registerParticleFactories(RegisterParticleProvidersEvent event){
-        event.registerSpriteSet(ModParticles.ITEM_SWIRL.get(), CustomItemParticle.Provider::new);
+        event.registerSpecial(ModParticles.ITEM_SWIRL.get(), new CustomItemParticle.Provider(null));
     }
 }

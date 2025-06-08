@@ -3,21 +3,21 @@ package net.undertaker.eldritch_arcanum.particles;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.client.particle.*;
-import net.minecraft.client.renderer.texture.TextureAtlasSprite;
+import net.minecraft.client.resources.model.BakedModel;
 import net.minecraft.core.particles.ItemParticleOption;
-import net.minecraft.core.particles.SimpleParticleType;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.phys.Vec3;
+import net.neoforged.neoforge.client.model.data.ModelData;
 import org.jetbrains.annotations.Nullable;
 
 public class CustomItemParticle extends TextureSheetParticle {
   private final Vec3 target;
-
   private double angle;
-
   private double radius;
-
   private final double rotationSpeed;
+  private final float uo;
+  private final float vo;
 
   public CustomItemParticle(
       ClientLevel level,
@@ -28,25 +28,54 @@ public class CustomItemParticle extends TextureSheetParticle {
       double targetX,
       double targetY,
       double targetZ) {
-    super(level, x, y, z, targetX, targetY, targetZ);
+
+    super(level, x, y, z, 0, 0, 0);
+
     this.target = new Vec3(targetX, targetY, targetZ);
     this.angle = Math.random() * Math.PI * 2;
-    double dx = x - targetX;
-    double dy = y - targetY;
-    double dz = z - targetZ;
-    this.radius = Math.sqrt(dx * dx + dy * dy + dz * dz);
+    this.radius = Math.sqrt(1.5);
+
     this.rotationSpeed = 0.1 + (Math.random() * 0.05);
+    this.sprite =
+        Minecraft.getInstance()
+            .getItemRenderer()
+            .getItemModelShaper()
+            .getItemModel(itemStack)
+            .getParticleIcon();
 
-    this.lifetime = 60 + this.random.nextInt(20);
+    this.lifetime = 40 + this.random.nextInt(20);
 
-    this.setSpriteFromItem(itemStack);
+    this.hasPhysics = false;
+    this.friction = 1.0f;
 
-    this.quadSize = 0.3f + this.random.nextFloat() * 0.2f;
+    BakedModel model = Minecraft.getInstance().getItemRenderer().getModel(itemStack, level, (LivingEntity)null, 0);
+    this.sprite = model.getOverrides().resolve(model, itemStack, level,(LivingEntity)null, 0).getParticleIcon(ModelData.EMPTY);
+    this.uo = this.random.nextFloat() * 3.0F;
+    this.vo = this.random.nextFloat() * 3.0F;
+    this.quadSize = 0.05f;
+  }
+
+  protected float getU0() {
+    return this.sprite.getU((this.uo + 1.0F) / 4.0F);
+  }
+
+  protected float getU1() {
+    return this.sprite.getU(this.uo / 4.0F);
+  }
+
+  protected float getV0() {
+    return this.sprite.getV(this.vo / 4.0F);
+  }
+
+  protected float getV1() {
+    return this.sprite.getV((this.vo + 1.0F) / 4.0F);
   }
 
   @Override
   public void tick() {
-    super.tick();
+    this.xo = this.x;
+    this.yo = this.y;
+    this.zo = this.z;
 
     if (this.age++ >= this.lifetime) {
       this.remove();
@@ -54,52 +83,30 @@ public class CustomItemParticle extends TextureSheetParticle {
     }
 
     this.angle += this.rotationSpeed;
+    this.radius *= 0.95;
 
-    // Пересчитываем координаты на окружности
     double offsetX = Math.cos(this.angle) * this.radius;
     double offsetZ = Math.sin(this.angle) * this.radius;
 
-    // Вычисляем, где должна быть частица сейчас (ось Y берем ближе к центру)
-    double newX = this.target.x + offsetX;
-    double newY = this.target.y + (this.target.y - this.y) * 0.1;
-    // слегка поднимать/опускать по Y, чтобы не «застревать» на одной плоскости
-    double newZ = this.target.z + offsetZ;
+    this.x = this.target.x + offsetX;
+    this.y = this.target.y + 0.5;
+    this.z = this.target.z + offsetZ;
 
-    // Приводим к «скорости» для плавного перемещения.
-    // Чем дальше текущая позиция от newX, тем выше скорость.
-    double dx = newX - this.x;
-    double dy = newY - this.y;
-    double dz = newZ - this.z;
+    this.xd = 0;
+    this.yd = 0;
+    this.zd = 0;
 
-    // Можно регулировать «жёсткость» эффекта: 0.1–0.2 → довольно плавно
-    double speedFactor = 0.15;
-
-    this.xd += dx * speedFactor;
-    this.yd += dy * speedFactor;
-    this.zd += dz * speedFactor;
+    float fadeProgress = (float) this.age / this.lifetime;
+    this.alpha = 1.0f - (fadeProgress * fadeProgress);
   }
 
   @Override
   public ParticleRenderType getRenderType() {
-    return ParticleRenderType.PARTICLE_SHEET_OPAQUE;
-  }
-
-  private void setSpriteFromItem(ItemStack stack) {
-    TextureAtlasSprite sprite =
-        Minecraft.getInstance()
-            .getItemRenderer()
-            .getItemModelShaper()
-            .getItemModel(stack)
-            .getParticleIcon();
-    this.setSprite(sprite);
+    return ParticleRenderType.TERRAIN_SHEET;
   }
 
   public static class Provider implements ParticleProvider<ItemParticleOption> {
-    private final SpriteSet spriteSet;
-
-    public Provider(SpriteSet spriteSet) {
-      this.spriteSet = spriteSet;
-    }
+    public Provider(SpriteSet spriteSet) {}
 
     @Override
     public @Nullable Particle createParticle(
@@ -114,15 +121,11 @@ public class CustomItemParticle extends TextureSheetParticle {
 
       ItemStack stack = itemParticleOption.getItem();
 
-      return new CustomItemParticle(
-          clientLevel,
-          x,
-          y,
-          z,
-          stack,
-          vx,
-          vy,
-          vz);
+      double targetX = x + vx;
+      double targetY = y + vy;
+      double targetZ = z + vz;
+
+      return new CustomItemParticle(clientLevel, x, y, z, stack, targetX, targetY, targetZ);
     }
   }
 }

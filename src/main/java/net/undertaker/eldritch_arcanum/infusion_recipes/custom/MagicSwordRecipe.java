@@ -17,8 +17,8 @@ import java.util.Map;
 
 public class MagicSwordRecipe implements InfusionRecipe {
     private static final Map<Essence, Integer> REQUIRED_ESSENCES = Map.of(
-            ModEssences.VOID_ESSENCE.get(), 4,
-            ModEssences.LUNAR_ESSENCE.get(), 8
+            ModEssences.VOID_ESSENCE.get(), 1,
+            ModEssences.LUNAR_ESSENCE.get(), 2
     );
 
     @Override
